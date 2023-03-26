@@ -16,8 +16,7 @@ interface DropDownProps {
   vibe: VibeType;
   setVibe: (vibe: VibeType) => void
 
-let vibes: VibeType[] = ["Business Writing", "Academic Essay", "News Article", "Letter to the Editor", "Marketing Copy", 
-                         "Prose", "Poem", "Diary Entry", "Memoir", "Movie Script", "Speech", "Eulogy"];
+let vibes: VibeType[] = ["Business Letter", "Academic Essay", "News Article", "Letter to the Editor", "Marketing Copy", "Prose", "Poem", "Diary Entry", "Memoir", "Movie Script", "Speech", "Eulogy"];
 
 export default function DropDown({ vibe, setVibe }: DropDownProps) {
   return (
