@@ -1,4 +1,4 @@
-# [TwitterBio.com](https://www.twitterbio.com/)
+# [GPTEssay.com](https://www.gptessay.com/)
 
 This project generates Twitter bios for you using AI.
 
