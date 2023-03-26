@@ -14,11 +14,11 @@ export interface ChatGPTMessage {
 export interface OpenAIStreamPayload {
   model: string;
   messages: ChatGPTMessage[];
-  temperature: 0.2;
+  temperature: number;
   top_p: number;
   frequency_penalty: number;
   presence_penalty: number;
-  max_tokens: 2000;
+  max_tokens: number;
   stream: boolean;
   n: number;
 }
