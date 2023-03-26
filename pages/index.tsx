@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} essays clearly labeled "1." and "2.". ${
+  const prompt = `Generate 2 ${vibe} essays clearly labeled "Essay #1." and "Essay #2.". ${
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : null
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "Elon Musk and the innovations he brought to automotive manufacturing."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                 {generatedBios
                   .substring(generatedBios.indexOf("1") + 3)
-                  .split("2.")
+                  .split("Essay #2.")
                   .map((generatedBio) => {
                     return (
                       <div
