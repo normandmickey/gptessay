@@ -23,11 +23,12 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Write a ${vibe}. ${
-    vibe === "Funny"
-      ? "Make sure there is a joke in there and it's a little ridiculous."
-      : null
-  }
+  const prompt = `Write a ${vibe}. 
+    // ${
+    // vibe === "Funny"
+    //  ? "Make sure there is a joke in there and it's a little ridiculous."
+    //  : null
+    // }
       Make sure the generated text is less than 1000 words and base it on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
