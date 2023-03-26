@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Write a ${vibe}. Make sure the generated text is less than 1000 words and base it on this context: ${bio}${
+  const prompt = `Write two articles in the style of ${vibe} clearly labeled "1." and "2.".. Make sure the generated text is less than 1000 words and base it on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
