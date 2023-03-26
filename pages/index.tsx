@@ -12,7 +12,7 @@ import LoadingDots from "../components/LoadingDots";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Essay");
+  const [vibe, setVibe] = useState<VibeType>("Academic Essay");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="text-left font-medium">Select your style.</p>
           </div>
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                 {generatedBios
                   .substring(generatedBios.indexOf("1") + 3)
-                  .split("Essay 2.")
+                  .split(".")
                   .map((generatedBio) => {
                     return (
                       <div
