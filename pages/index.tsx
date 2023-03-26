@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Write two articles in the style of a ${vibe} clearly labeled "Article 1." and "Article 2.". Make sure the generated text is less than 500 words and base it on this context: ${bio}${
+  const prompt = `Write two articles in the style of a ${vibe} clearly labeled "1." and "2.". Make sure the generated text is less than 500 words and base it on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
             <p className="text-left font-medium">
               Enter your topic{" "}
               <span className="text-slate-500">
-                (or write a few sentences explaining your essay)
+                (or write a few sentences explaining your writing project.)
               </span>
               .
             </p>
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Write your essay &rarr;
+              Write &rarr;
             </button>
           )}
           {loading && (
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                 {generatedBios
                   .substring(generatedBios.indexOf("1") + 3)
-                  .split("Article 2.")
+                  .split("2.")
                   .map((generatedBio) => {
                     return (
                       <div
