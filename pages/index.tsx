@@ -23,12 +23,12 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} essays clearly labeled "Essay 1." and "Essay 2.". ${
+  const prompt = `Generate a ${vibe} essay". ${
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : null
   }
-      Make sure each generated essay is less than 1000 words and base them on this context: ${bio}${
+      Make sure the generated essay is less than 1000 words and base it on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Write an essay on any topic using chatGPT
         </h1>
-        <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
+        <p className="text-slate-500 mt-5"></p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
