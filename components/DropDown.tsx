@@ -10,7 +10,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type VibeType = "Essay" | "Song" | "Obituary | "Poem" | "Speech" | "Email" | "Letter";
+export type VibeType = "Essay" | "Song" | "Obituary" | "Poem" | "Speech" | "Email" | "Letter";
 
 interface DropDownProps {
   vibe: VibeType;
