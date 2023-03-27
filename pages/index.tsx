@@ -88,9 +88,16 @@ const Home: NextPage = () => {
         </h1>
         <p className="text-slate-500 mt-5"></p>
         <div className="max-w-xl w-full">
+          <div className="flex mb-5 items-center space-x-3">
+            <Image src="/1-black.png" width={30} height={30} alt="1 icon" />
+            <p className="text-left font-medium">Select your style.</p>
+          </div>
+          <div className="block">
+            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
+          </div>
           <div className="flex mt-10 items-center space-x-3">
             <Image
-              src="/1-black.png"
+              src="/2-black.png"
               width={30}
               height={30}
               alt="1 icon"
@@ -113,13 +120,6 @@ const Home: NextPage = () => {
               "Elon Musk and the innovations he brought to automotive manufacturing."
             }
           />
-          <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your style.</p>
-          </div>
-          <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
-          </div>
 
           {!loading && (
             <button
