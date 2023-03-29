@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         nonce: undefined,
       }}>
       <Component {...pageProps} />
-      <Analytics />
       </GoogleReCaptchaProvider>
     </>
   );
