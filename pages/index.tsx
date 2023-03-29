@@ -8,8 +8,10 @@ import Footer from "../components/Footer";
 import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const Home: NextPage = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
   const [vibe, setVibe] = useState<VibeType>("Academic Essay");
