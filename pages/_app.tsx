@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         async: false,
         defer: false,
         appendTo: "head",
-        type: "reCAPTCHA v3",
         nonce: undefined,
       }}>
       <Component {...pageProps} />
