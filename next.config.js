@@ -8,14 +8,9 @@ module.exports = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/Nutlope/twitterbio",
+        destination: "https://github.com/normandmickey/gptessay",
         permanent: false,
-      },
-      {
-        source: "/deploy",
-        destination: "https://vercel.com/templates/next.js/twitter-bio",
-        permanent: false,
-      },
+      }
     ];
   },
 };
