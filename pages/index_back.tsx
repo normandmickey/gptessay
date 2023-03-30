@@ -65,17 +65,6 @@ const Home: NextPage = () => {
     }
     scrollToBios();
     setLoading(false);
-    e.preventDefault();
-    if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
-      return;
-    }
-    executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-      console.log(gReCaptchaToken, "response Google reCaptcha server");
-      submitEnquiryForm(gReCaptchaToken);
-    });
-  },
-  [executeRecaptcha]
   };
 
   return (
