@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     }
     executeRecaptcha("generateBio").then((gReCaptchaToken) => {
       console.log(gReCaptchaToken, "response Google reCaptcha server");
-      submitEnquiryForm(gReCaptchaToken);
+      generateBio(gReCaptchaToken);
     });
   },
   [executeRecaptcha]
