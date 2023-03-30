@@ -31,17 +31,6 @@ const Home: NextPage = () => {
 
   const generateBio = async (e: any) => {
     e.preventDefault();
-    e.preventDefault();
-    if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
-      return;
-    }
-    executeRecaptcha("generateBio").then((gReCaptchaToken) => {
-      console.log(gReCaptchaToken, "response Google reCaptcha server");
-      generateBio(gReCaptchaToken);
-    });
-  },
-  [executeRecaptcha]
     setGeneratedBios("");
     setLoading(true);
     const response = await fetch("/api/generate", {
