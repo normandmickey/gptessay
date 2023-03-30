@@ -6,7 +6,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GoogleReCaptchaProvider
-      reCaptchaKey=process.env.reCAPTCHA_Site_key
+      reCaptchaKey="{process.env.reCAPTCHA_Site_key}"
       scriptProps={{
         async: false,
         defer: false,
