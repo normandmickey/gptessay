@@ -31,6 +31,17 @@ const Home: NextPage = () => {
 
   const generateBio = async (e: any) => {
     e.preventDefault();
+    e.preventDefault();
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
+    executeRecaptcha("generateBio").then((gReCaptchaToken) => {
+      console.log(gReCaptchaToken, "response Google reCaptcha server");
+      submitEnquiryForm(gReCaptchaToken);
+    });
+  },
+  [executeRecaptcha]
     setGeneratedBios("");
     setLoading(true);
     const response = await fetch("/api/generate", {
@@ -65,17 +76,6 @@ const Home: NextPage = () => {
     }
     scrollToBios();
     setLoading(false);
-    e.preventDefault();
-    if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
-      return;
-    }
-    executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-      console.log(gReCaptchaToken, "response Google reCaptcha server");
-      submitEnquiryForm(gReCaptchaToken);
-    });
-  },
-  [executeRecaptcha]
   };
 
   return (
