@@ -157,7 +157,7 @@ const Home: NextPage = () => {
                   Your generated essay
                 </h2>
               </div>
-              <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+              <div className="space-y-8 whitespace-pre-wrap flex flex-col items-center justify-center max-w-xl mx-auto">
                 {generatedBios
                   .substring(generatedBios.indexOf("1") + 3)
                   .split("2.")
